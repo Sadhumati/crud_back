@@ -1,0 +1,54 @@
+{
+    "name": "konztec",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node dist/server.js ",
+        "dev": "nodemon src/server.js",
+        "clean": "rm -rf dist",
+        "transpile": "babel ./src --out-dir dist",
+        "build": "sucrase ./src -d ./dist --transforms imports"
+    },
+    "babel": {
+        "presets": ["@babel/preset-env"]
+    },
+    "dependencies": {
+        "@babel/cli": "^7.16.7",
+        "@babel/core": "^7.16.7",
+        "@babel/preset-env": "^7.16.7",
+        "aws-sdk": "^2.1049.0",
+        "axios": "^0.19.2",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "cpf-cnpj-validator": "^1.0.2",
+        "crypto": "^1.0.1",
+        "date-fns": "^2.15.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
+        "express-handlebars": "^5.1.0",
+        "fs": "^0.0.1-security",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.2",
+        "multer-s3": "^2.9.0",
+        "nodemailer": "^6.4.17",
+        "pg": "^8.3.0",
+        "pg-hstore": "^2.3.3",
+        "querystring": "^0.2.0",
+        "sequelize": "^6.3.4",
+        "sucrase": "^3.15.0",
+        "totalvoice-node": "^1.10.0",
+        "uuid": "^8.3.0",
+        "youch": "^2.0.10",
+        "yup": "^0.29.3"
+    },
+    "devDependencies": {
+        "eslint": "^7.9.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "nodemon": "^2.0.4",
+        "sequelize-cli": "^6.2.0"
+    }
+}
