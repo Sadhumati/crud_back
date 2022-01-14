@@ -15,7 +15,7 @@ class Database {
     }
 
     init() {
-        const databaseConfig = process.env.NODE_ENV === 'development' ? databaseConfigProd : databaseConfigDev;
+        const databaseConfig = process.env.NODE_ENV === 'production' ? databaseConfigProd : databaseConfigDev;
 
         this.connection = new Sequelize(databaseConfig);
 
